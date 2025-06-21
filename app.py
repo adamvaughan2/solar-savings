@@ -19,7 +19,7 @@ st.title('☀️ Solar Installation Savings Calculator')
 # sidebar
 st.sidebar.title('Info')
 st.sidebar.write(f'''
-MVP for solar installation saving calculator. Improvements to come:
+MVP for solar installation savings calculator. Improvements to come:
 - Add battery storage
 - Add time-of-use tariffs
 - Option to select from real tariffs (eg integration with Octopus API)
@@ -72,8 +72,8 @@ with col1:
     df = sp.calculate_costs(import_cost, export_cost, nominal_power)
     monthly_df = df.resample('MS').sum()
 
-    # display key metrics: annual saving on left and payback period in middle
-    col11, col12, col13 = st.columns([1,1,1])
+    # display key metrics: annual saving on left and payback period on right
+    col11, col12 = st.columns([1,1])
     
     with col11:
         st.metric('Estimated annual saving', f'£{df['solar_saving'].sum():.0f}', border=True,
