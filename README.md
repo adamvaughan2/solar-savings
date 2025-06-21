@@ -1,5 +1,7 @@
 # Solar Savings Repo
 
+Find the dashboard here: https://solarsavings.streamlit.app/
+
 This repo contains two code files:
 - _app.py_ builds the streamlit dashboard
 - _app_services.py_ contains the class `SolarPanels` which does all the calculations in the background
